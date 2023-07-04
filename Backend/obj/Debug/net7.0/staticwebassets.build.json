@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mIDr1LWqtliBfAKuTyDXK9ULQDUEdimKlrHaJMQqzFE=",
+  "Hash": "CEbxxGIsLXPIz5H0H+LvJ+/nqJA/CiRlwt6bVLJb8oQ=",
   "Source": "LoginApi",
   "BasePath": "_content/LoginApi",
   "Mode": "Default",
@@ -204,12 +204,12 @@
       "OriginalItemSpec": "wwwroot\\build\\static\\js\\787.a743e0dc.chunk.js.map"
     },
     {
-      "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\js\\main.1d0f35ae.js",
+      "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\js\\main.02ffe5ed.js",
       "SourceId": "LoginApi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\",
       "BasePath": "_content/LoginApi",
-      "RelativePath": "build/static/js/main.1d0f35ae.js",
+      "RelativePath": "build/static/js/main.02ffe5ed.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -218,15 +218,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\build\\static\\js\\main.1d0f35ae.js"
+      "OriginalItemSpec": "wwwroot\\build\\static\\js\\main.02ffe5ed.js"
     },
     {
-      "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\js\\main.1d0f35ae.js.LICENSE.txt",
+      "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\js\\main.02ffe5ed.js.LICENSE.txt",
       "SourceId": "LoginApi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\",
       "BasePath": "_content/LoginApi",
-      "RelativePath": "build/static/js/main.1d0f35ae.js.LICENSE.txt",
+      "RelativePath": "build/static/js/main.02ffe5ed.js.LICENSE.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -235,15 +235,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\build\\static\\js\\main.1d0f35ae.js.LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\build\\static\\js\\main.02ffe5ed.js.LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\js\\main.1d0f35ae.js.map",
+      "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\js\\main.02ffe5ed.js.map",
       "SourceId": "LoginApi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\",
       "BasePath": "_content/LoginApi",
-      "RelativePath": "build/static/js/main.1d0f35ae.js.map",
+      "RelativePath": "build/static/js/main.02ffe5ed.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -252,7 +252,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\build\\static\\js\\main.1d0f35ae.js.map"
+      "OriginalItemSpec": "wwwroot\\build\\static\\js\\main.02ffe5ed.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\media\\infopagina.d20028179e72149bc77b.PNG",
+      "SourceId": "LoginApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\",
+      "BasePath": "_content/LoginApi",
+      "RelativePath": "build/static/media/infopagina.d20028179e72149bc77b.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\build\\static\\media\\infopagina.d20028179e72149bc77b.PNG"
     },
     {
       "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\media\\LoginBackground.a6695b7bdd8b803907ad.jpg",
