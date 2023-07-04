@@ -9,7 +9,6 @@ using System;
 using System.Text;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
-using System.Collections.Generic;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
