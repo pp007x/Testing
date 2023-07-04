@@ -30,14 +30,14 @@ public class DatabaseSeeder
                 Id = 1,
                 Name = "Company 1",
                 Description = "Description 1",
-                Code = "Code 1"
+                Code = "1"
             },
             new Company
             {
                 Id = 2,
                 Name = "Company 2",
                 Description = "Description 2",
-                Code = "Code 2"
+                Code = "2"
             }
         };
 

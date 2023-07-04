@@ -50,7 +50,6 @@ public class UsersController : ControllerBase
     }
 
     [HttpGet("Profile")]
-    [Authorize]
     public ActionResult<User> GetProfile()
     {
         var usernameClaim = User.Identity.Name;
