@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using LoginApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using LoginApi.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace LoginApi.Controllers
 {
@@ -16,6 +17,11 @@ namespace LoginApi.Controllers
         {
             _context = context;
         }
+    [HttpGet]
+    public ActionResult<IEnumerable<Onderwerp>> GetOnderwerpen()
+    {
+        return _context.Onderwerpen.ToList();
+    }
 
         [HttpGet("user/{userId}")]
         public ActionResult<Onderwerp> GetOnderwerpForUser(int userId)
@@ -91,5 +97,44 @@ namespace LoginApi.Controllers
 
             return userBoxes;
         }
+    // OnderwerpController.cs
+[HttpGet("{id}")]
+public ActionResult<Onderwerp> GetOnderwerp(int id)
+{
+    var onderwerp = _context.Onderwerpen.Find(id);
+    if (onderwerp == null)
+    {
+        return NotFound();
+    }
+    return onderwerp;
+}
+
+[HttpPut("{id}")]
+public ActionResult<Onderwerp> UpdateOnderwerp(int id, Onderwerp onderwerp)
+{
+    if (id != onderwerp.Id)
+    {
+        return BadRequest();
+    }
+
+    _context.Entry(onderwerp).State = EntityState.Modified;
+    try
+    {
+        _context.SaveChanges();
+    }
+    catch (DbUpdateConcurrencyException)
+    {
+        if (!_context.Onderwerpen.Any(o => o.Id == id))
+        {
+            return NotFound();
+        }
+        else
+        {
+            throw;
+        }
+    }
+    return NoContent();
+}
+
     }
 }
