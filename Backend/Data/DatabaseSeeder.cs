@@ -233,7 +233,7 @@ private void SeedOnderwerpen()
             {
                 Id = 1,
                 Username = "user1",
-                Password = "password1",
+                Password = "$2a$11$wZX5t0Iln2z3LMp93Z0dUeja6Mhkx2Tv7uKzcrAk3nsvYA3uTw8Dm",
                 CompanyId = 1,
                 IsAdmin = true,
                 Box = "Ds"
@@ -242,7 +242,7 @@ private void SeedOnderwerpen()
             {
                 Id = 2,
                 Username = "user2",
-                Password = "password2",
+                Password = "$2a$11$wZX5t0Iln2z3LMp93Z0dUeja6Mhkx2Tv7uKzcrAk3nsvYA3uTw8Dm",
                 CompanyId = 1,
                 IsAdmin = false,
                 Box = "Sd"
