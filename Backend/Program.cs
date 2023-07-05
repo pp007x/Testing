@@ -30,7 +30,6 @@ builder.Services.AddCors(options =>
         builder =>
         {
             builder.WithOrigins("https://temptestedwin.azurewebsites.net")
-            // builder.WithOrigins("http://localhost:3000") // replace with your React app's address
                    .AllowAnyHeader()
                    .AllowAnyMethod();
         });
@@ -90,22 +89,17 @@ else
 
 app.Use(async (context, next) =>
 {
-    context.Response.Headers.Add("Content-Security-Policy",
+    if (!context.Response.Headers.ContainsKey("Content-Security-Policy"))
+        context.Response.Headers.Add("Content-Security-Policy",
                             "default-src 'self'; " +
                             "img-src 'self'; " +
                             "font-src 'self'; " +
                             "style-src 'self'; " +
                             "script-src 'self';");
-    context.Response.Headers.Add("X-Frame-Options", "DENY");
-    await next();
-});
-
-app.UseHttpsRedirection();
-
-
-app.Use(async (context, next) =>
-{
-    context.Response.Headers.Add("X-Frame-Options", "DENY");
+                            
+    if (!context.Response.Headers.ContainsKey("X-Frame-Options"))
+        context.Response.Headers.Add("X-Frame-Options", "DENY");
+    
     await next();
 });
 
@@ -118,6 +112,7 @@ app.UseDefaultFiles(new DefaultFilesOptions
     FileProvider = new PhysicalFileProvider(
         Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "build")),
 });
+
 
 app.UseStaticFiles(new StaticFileOptions
 {
