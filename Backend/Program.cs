@@ -89,19 +89,16 @@ else
 
 app.Use(async (context, next) =>
 {
-    if (!context.Response.Headers.ContainsKey("Content-Security-Policy"))
-        context.Response.Headers.Add("Content-Security-Policy",
+    context.Response.Headers.Add("Content-Security-Policy",
                             "default-src 'self'; " +
-                            "img-src 'self'; " +
+                            "img-src 'self' data:; " +  // Added "data:" here
                             "font-src 'self'; " +
                             "style-src 'self'; " +
                             "script-src 'self';");
-                            
-    if (!context.Response.Headers.ContainsKey("X-Frame-Options"))
-        context.Response.Headers.Add("X-Frame-Options", "DENY");
-    
+    context.Response.Headers.Add("X-Frame-Options", "DENY");
     await next();
 });
+
 
 app.UseHttpsRedirection();
 
