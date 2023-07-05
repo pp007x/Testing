@@ -83,6 +83,31 @@ if (app.Environment.IsDevelopment())
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
     });
 }
+else
+{
+    app.UseHsts();
+}
+
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.Add("Content-Security-Policy",
+                            "default-src 'self'; " +
+                            "img-src 'self'; " +
+                            "font-src 'self'; " +
+                            "style-src 'self'; " +
+                            "script-src 'self';");
+    context.Response.Headers.Add("X-Frame-Options", "DENY");
+    await next();
+});
+
+app.UseHttpsRedirection();
+
+
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.Add("X-Frame-Options", "DENY");
+    await next();
+});
 
 app.UseHttpsRedirection();
 
