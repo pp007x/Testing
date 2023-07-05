@@ -26,6 +26,7 @@ public class AddQuestionController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Roles = "Admin")]
     public async Task<ActionResult<QuestionDTO>> PostQuestion(QuestionDTO questionDto)
     {
         var question = new Question {
@@ -47,8 +48,9 @@ public class AddQuestionController : ControllerBase
     }
 
     [HttpGet("{id}")]
-public async Task<ActionResult<QuestionDTO>> GetQuestion(int id)
-{
+    [Authorize(Roles = "Admin")]
+    public async Task<ActionResult<QuestionDTO>> GetQuestion(int id)
+    {
     var question = await _context.Questions.FindAsync(id);
 
     if (question == null)

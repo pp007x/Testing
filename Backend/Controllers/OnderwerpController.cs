@@ -4,6 +4,7 @@ using LoginApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using LoginApi.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LoginApi.Controllers
 {
@@ -18,6 +19,7 @@ namespace LoginApi.Controllers
             _context = context;
         }
     [HttpGet]
+    [Authorize]
     public ActionResult<IEnumerable<Onderwerp>> GetOnderwerpen()
     {
         return _context.Onderwerpen.ToList();
@@ -46,6 +48,7 @@ private readonly Dictionary<string, string> _boxToOnderwerpMapping = new Diction
 
 
 [HttpGet("user/{userId}")]
+[Authorize]
 public ActionResult<Onderwerp> GetOnderwerpForUser(int userId)
 {
     // Fetch the user
@@ -79,6 +82,7 @@ public ActionResult<Onderwerp> GetOnderwerpForUser(int userId)
 
 
         [HttpGet("box/{userId}")]
+        [Authorize]
         public ActionResult<string> GetUserBox(int userId)
         {
             // Fetch the user's scores
@@ -112,6 +116,7 @@ public ActionResult<Onderwerp> GetOnderwerpForUser(int userId)
         }
 
         [HttpGet("company/{companyId}")]
+        [Authorize]
         public ActionResult<List<UserBox>> GetCompanyUsers(int companyId)
         {
             var companyUsers = _context.Users.Where(u => u.CompanyId == companyId);
@@ -131,6 +136,7 @@ public ActionResult<Onderwerp> GetOnderwerpForUser(int userId)
         }
     // OnderwerpController.cs
 [HttpGet("{id}")]
+[Authorize]
 public ActionResult<Onderwerp> GetOnderwerp(int id)
 {
     var onderwerp = _context.Onderwerpen.Find(id);
@@ -142,6 +148,7 @@ public ActionResult<Onderwerp> GetOnderwerp(int id)
 }
 
 [HttpPut("{id}")]
+[Authorize(Roles = "Admin")]
 public ActionResult<Onderwerp> UpdateOnderwerp(int id, Onderwerp onderwerp)
 {
     if (id != onderwerp.Id)

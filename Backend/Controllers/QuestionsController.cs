@@ -21,6 +21,7 @@ namespace LoginApi.Controllers
         }
 
         [HttpGet("{companyId}")]
+        [Authorize]
         public async Task<ActionResult<List<QuestionDTO>>> GetQuestionsByCompany(int companyId)
         {
             var questions = await _context.Questions
@@ -49,8 +50,8 @@ namespace LoginApi.Controllers
         }
 
 
-        [Authorize]
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Question>> PostQuestion(QuestionDTO questionDto)
         {
             var question = new Question
@@ -74,6 +75,7 @@ namespace LoginApi.Controllers
         }
 
 [HttpPut]
+[Authorize(Roles = "Admin")]
 public async Task<IActionResult> UpdateQuestions(List<QuestionDTO> questionDtoList)
 {
     foreach (var questionDto in questionDtoList)
@@ -145,8 +147,8 @@ public async Task<IActionResult> UpdateQuestions(List<QuestionDTO> questionDtoLi
 
 
 
-        [Authorize]
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteQuestion(int id)
         {
             var question = await _context.Questions.FindAsync(id);

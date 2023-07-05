@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using LoginApi.Data;
 using LoginApi.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LoginApi.Controllers
 {
@@ -25,12 +26,14 @@ namespace LoginApi.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<IEnumerable<Company>>> GetCompanies()
         {
             return await _context.Companies.ToListAsync();
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Company>> PostCompany(Company company)
         {
             _context.Companies.Add(company);
@@ -40,6 +43,7 @@ namespace LoginApi.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<Company>> GetCompany(int id)
         {
             var company = await _context.Companies.FindAsync(id);
@@ -53,6 +57,7 @@ namespace LoginApi.Controllers
         }
 
         [HttpGet("{companyId}/users")]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<User>>> GetUsersForCompany(int companyId)
         {
             var users = await _context.Users.Where(u => u.CompanyId == companyId).ToListAsync();
@@ -67,6 +72,7 @@ namespace LoginApi.Controllers
 
         // CompaniesController.cs
 [HttpDelete("{id}")]
+[Authorize(Roles = "Admin")]
 public async Task<IActionResult> DeleteCompany(int id)
 {
     var company = await _context.Companies.FindAsync(id);

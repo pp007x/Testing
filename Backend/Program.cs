@@ -30,6 +30,7 @@ builder.Services.AddCors(options =>
         builder =>
         {
             builder.WithOrigins("https://temptestedwin.azurewebsites.net")
+            // builder.WithOrigins("http://localhost:3000")
                    .AllowAnyHeader()
                    .AllowAnyMethod();
         });
@@ -91,13 +92,16 @@ app.Use(async (context, next) =>
 {
     context.Response.Headers.Add("Content-Security-Policy",
                             "default-src 'self'; " +
-                            "img-src 'self' data:; " +  // Added "data:" here
+                            "img-src 'self' data:; " +  // Add 'data:' here
                             "font-src 'self'; " +
                             "style-src 'self'; " +
-                            "script-src 'self';");
+                            "script-src 'self';" +
+                            "frame-ancestors 'none';" +
+                            "form-action 'self';");
     context.Response.Headers.Add("X-Frame-Options", "DENY");
     await next();
 });
+
 
 
 app.UseHttpsRedirection();

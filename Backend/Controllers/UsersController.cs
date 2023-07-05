@@ -95,7 +95,7 @@ public async Task<ActionResult> GenerateResetToken(int id)
     }
 
     var rng = new Random();
-    var token = rng.Next(100000000, 999999); // 6-digit token
+    var token = rng.Next(100000, 999999); // 6-digit token
 
     var resetEntry = new PasswordReset
     {
