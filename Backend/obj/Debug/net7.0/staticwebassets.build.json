@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qMX7LJRG69V4+vnav4G0B/+RhCLgOBLTWIr7/C47tW8=",
+  "Hash": "FtWR1iJAjCkqX0P7Y7+bgZ3SdLi5+EKujqMMypQNem0=",
   "Source": "LoginApi",
   "BasePath": "_content/LoginApi",
   "Mode": "Default",
@@ -136,12 +136,12 @@
       "OriginalItemSpec": "wwwroot\\build\\robots.txt"
     },
     {
-      "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\css\\main.6597fe06.css",
+      "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\css\\main.eaccb9e1.css",
       "SourceId": "LoginApi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\",
       "BasePath": "_content/LoginApi",
-      "RelativePath": "build/static/css/main.6597fe06.css",
+      "RelativePath": "build/static/css/main.eaccb9e1.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,15 +150,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\build\\static\\css\\main.6597fe06.css"
+      "OriginalItemSpec": "wwwroot\\build\\static\\css\\main.eaccb9e1.css"
     },
     {
-      "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\css\\main.6597fe06.css.map",
+      "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\css\\main.eaccb9e1.css.map",
       "SourceId": "LoginApi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\",
       "BasePath": "_content/LoginApi",
-      "RelativePath": "build/static/css/main.6597fe06.css.map",
+      "RelativePath": "build/static/css/main.eaccb9e1.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -167,7 +167,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\build\\static\\css\\main.6597fe06.css.map"
+      "OriginalItemSpec": "wwwroot\\build\\static\\css\\main.eaccb9e1.css.map"
     },
     {
       "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\js\\787.a743e0dc.chunk.js",
