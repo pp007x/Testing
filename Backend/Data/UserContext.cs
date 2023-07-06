@@ -17,5 +17,12 @@ public class UserContext : DbContext
     public DbSet<Company> Companies { get; set; }
     public DbSet<Onderwerp> Onderwerpen { get; set; }
     public DbSet<PasswordReset> PasswordResets { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Company>()
+            .HasIndex(c => c.Name)
+            .IsUnique();
+    }
 }
 }

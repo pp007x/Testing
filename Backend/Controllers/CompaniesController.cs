@@ -32,15 +32,32 @@ namespace LoginApi.Controllers
             return await _context.Companies.ToListAsync();
         }
 
-        [HttpPost]
-        [Authorize(Roles = "Admin")]
-        public async Task<ActionResult<Company>> PostCompany(Company company)
+[HttpPost]
+[Authorize(Roles = "Admin")]
+public async Task<ActionResult<Company>> PostCompany(Company company)
+{
+    try
+    {
+        _context.Companies.Add(company);
+        await _context.SaveChangesAsync();
+    }
+    catch (DbUpdateException ex)
+    {
+        if (ex.InnerException != null && ex.InnerException.Message.Contains("UNIQUE constraint failed"))
         {
-            _context.Companies.Add(company);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetCompanies", new { id = company.Id }, company);
+            // This is a unique constraint error
+            return Conflict("A company with this name already exists.");
         }
+        else
+        {
+            throw;
+        }
+    }
+
+    return CreatedAtAction("GetCompanies", new { id = company.Id }, company);
+}
+
+
 
         [HttpGet("{id}")]
         [Authorize]
