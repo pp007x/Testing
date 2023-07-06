@@ -46,6 +46,26 @@ public class AddQuestionController : ControllerBase
 
         return CreatedAtAction("GetQuestion", new { id = question.Id }, questionDto);
     }
+[HttpPost]
+[Authorize(Roles = "Admin")]
+[Route("AddOpenQuestion")]
+public async Task<IActionResult> AddOpenQuestion([FromBody] QuestionOpenDTO questionDto)
+{
+    if (ModelState.IsValid)
+    {
+        var question = new QuestionOpen
+        {
+            QuestionText = questionDto.QuestionText,
+            CompanyId = questionDto.CompanyId,
+            Answers = questionDto.Answers.Select(a => new AnswerOpen { AnswerText = a.AnswerText }).ToList()
+        };
+        
+        _context.QuestionOpen.Add(question);
+        await _context.SaveChangesAsync();
+        return Ok();
+    }
+    return BadRequest();
+}
 
     [HttpGet("{id}")]
     [Authorize(Roles = "Admin")]

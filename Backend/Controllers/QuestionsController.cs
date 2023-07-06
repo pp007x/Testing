@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace LoginApi.Controllers
@@ -21,7 +22,7 @@ namespace LoginApi.Controllers
         }
 
         [HttpGet("{companyId}")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<List<QuestionDTO>>> GetQuestionsByCompany(int companyId)
         {
             var questions = await _context.Questions
@@ -144,8 +145,6 @@ public async Task<IActionResult> UpdateQuestions(List<QuestionDTO> questionDtoLi
 
     return NoContent();
 }
-
-
 
         [HttpDelete("{id}")]
         [Authorize(Roles = "Admin")]

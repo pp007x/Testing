@@ -18,6 +18,10 @@ public class UserContext : DbContext
     public DbSet<Onderwerp> Onderwerpen { get; set; }
     public DbSet<PasswordReset> PasswordResets { get; set; }
 
+    public DbSet<QuestionOpen> QuestionOpen { get; set; }
+
+    public DbSet<OpenAnswers> OpenAnswers { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Company>()

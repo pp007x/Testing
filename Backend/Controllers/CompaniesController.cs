@@ -57,10 +57,52 @@ public async Task<ActionResult<Company>> PostCompany(Company company)
     return CreatedAtAction("GetCompanies", new { id = company.Id }, company);
 }
 
+[HttpGet("current")]
+[Authorize]
+public async Task<ActionResult<Company>> GetCurrentCompany()
+{
+    var usernameClaim = User.Identity.Name;
+    var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == usernameClaim);
+
+    if (user == null)
+    {
+        return NotFound();
+    }
+
+    var company = await _context.Companies.FindAsync(user.CompanyId);
+    if (company == null)
+    {
+        return NotFound();
+    }
+
+    return company;
+}
+[HttpGet("users")]
+[Authorize]
+public async Task<ActionResult<IEnumerable<User>>> GetUsersForCompany()
+{
+    var usernameClaim = User.Identity.Name;
+    var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == usernameClaim);
+
+    if (user == null)
+    {
+        return NotFound();
+    }
+
+    var companyId = user.CompanyId;
+    var users = await _context.Users.Where(u => u.CompanyId == companyId).ToListAsync();
+
+    if (users == null)
+    {
+        return NotFound();
+    }
+
+    return users;
+}
 
 
         [HttpGet("{id}")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Company>> GetCompany(int id)
         {
             var company = await _context.Companies.FindAsync(id);
@@ -74,7 +116,7 @@ public async Task<ActionResult<Company>> PostCompany(Company company)
         }
 
         [HttpGet("{companyId}/users")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<IEnumerable<User>>> GetUsersForCompany(int companyId)
         {
             var users = await _context.Users.Where(u => u.CompanyId == companyId).ToListAsync();
