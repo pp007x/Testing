@@ -22,6 +22,124 @@ namespace LoginApi.Controllers
         }
 
 
+[HttpGet("company/{companyId}")]
+[Authorize]
+public async Task<ActionResult<List<QuestionOpenDTO>>> GetCompanyQuestions(int companyId)
+{
+    var companyQuestions = await _context.QuestionOpen
+        .Where(q => q.CompanyId == companyId)
+        .Include(q => q.Answers)
+        .ToListAsync();
+
+    if (!companyQuestions.Any())
+    {
+        return NotFound("No questions found for the provided company ID.");
+    }
+
+    var questionOpenDTOs = companyQuestions.Select(q => new QuestionOpenDTO
+    {
+        Id = q.Id,
+        QuestionText = q.QuestionText,
+        CompanyId = q.CompanyId,
+        Answers = q.Answers.Select(a => new AnswerOpenDTO
+        {
+            Id = a.Id,
+            QuestionOpenId = a.QuestionOpenId,
+            AnswerText = a.AnswerText
+        }).ToList()
+    }).ToList();
+
+    return questionOpenDTOs;
+}
+
+[HttpDelete("{id}")]
+[Authorize(Roles = "Admin")]
+public async Task<IActionResult> DeleteOpenQuestion(int id)
+{
+    var questionOpen = await _context.QuestionOpen.FindAsync(id);
+    if (questionOpen == null)
+    {
+        return NotFound();
+    }
+
+    _context.QuestionOpen.Remove(questionOpen);
+    await _context.SaveChangesAsync();
+
+    return NoContent();
+}
+
+
+
+[HttpGet("companyOpen/{companyId}")]
+[Authorize]
+public async Task<ActionResult<List<QuestionOpenDTO>>> GetOpenQuestionsCompany(int companyId)
+{
+    var openQuestions = await _context.QuestionOpen
+        .Where(q => q.CompanyId == companyId)
+        .Include(q => q.Answers)
+        .ToListAsync();
+
+    var questionOpenDTOs = openQuestions.Select(q => new QuestionOpenDTO
+    {
+        Id = q.Id,
+        QuestionText = q.QuestionText,
+        CompanyId = q.CompanyId,
+        Answers = q.Answers.Select(a => new AnswerOpenDTO
+        {
+            Id = a.Id,
+            QuestionOpenId = a.QuestionOpenId,
+            AnswerText = a.AnswerText
+        }).ToList()
+    }).ToList();
+
+    return questionOpenDTOs;
+}
+
+private bool QuestionOpenExists(int questionId)
+{
+    return _context.QuestionOpen.Any(q => q.Id == questionId);
+}
+
+
+[HttpPut]
+[Authorize(Roles = "Admin")]
+public async Task<IActionResult> UpdateOpenQuestions(List<QuestionOpenDTO> questionDtoList)
+{
+    foreach (var questionDto in questionDtoList)
+    {
+        QuestionOpen question;
+
+        if (QuestionOpenExists(questionDto.Id)) // Question exists, so we fetch it
+        {
+            question = await _context.QuestionOpen.FirstOrDefaultAsync(q => q.Id == questionDto.Id);
+            question.QuestionText = questionDto.QuestionText;
+        }
+        else // Question does not exist, so we create it
+        {
+            question = new QuestionOpen
+            {
+                QuestionText = questionDto.QuestionText,
+                CompanyId = questionDto.CompanyId,
+            };
+
+            _context.QuestionOpen.Add(question);
+        }
+    }
+
+    try
+    {
+        await _context.SaveChangesAsync();
+    }
+    catch (DbUpdateConcurrencyException)
+    {
+        throw;
+    }
+
+    return NoContent();
+}
+
+
+
 [HttpGet("open")]
 [Authorize]
 public async Task<ActionResult<List<QuestionOpenDTO>>> GetOpenQuestions()
@@ -92,6 +210,22 @@ public async Task<ActionResult<IEnumerable<OpenAnswers>>> GetAnswersByLoggedInUs
 
     return userAnswers;
 }
+
+[HttpGet("user/{id}")]
+[Authorize(Roles = "Admin")]
+public async Task<ActionResult<IEnumerable<OpenAnswers>>> GetAnswersByUser(int id)
+{
+    var userAnswers = await _context.OpenAnswers.Where(answer => answer.UserId == id).ToListAsync();
+
+    if (!userAnswers.Any())
+    {
+        return NotFound();
+    }
+
+    return userAnswers;
+}
+
+
 
 [HttpPost("openanswers")]
 [Authorize]

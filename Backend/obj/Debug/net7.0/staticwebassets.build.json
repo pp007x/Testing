@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gh+DEqnG/squgix2MvCMpgflRwrJWeQbK5C4p+U3A4I=",
+  "Hash": "BqUT69AbUPeUx7tiU+Hu/fJJ383F05LBFxhV1lMZTEg=",
   "Source": "LoginApi",
   "BasePath": "_content/LoginApi",
   "Mode": "Default",
@@ -289,12 +289,12 @@
       "OriginalItemSpec": "wwwroot\\build\\static\\js\\787.a743e0dc.chunk.js.map"
     },
     {
-      "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\js\\main.7e087c24.js",
+      "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\js\\main.5e5e0603.js",
       "SourceId": "LoginApi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\",
       "BasePath": "_content/LoginApi",
-      "RelativePath": "build/static/js/main.7e087c24.js",
+      "RelativePath": "build/static/js/main.5e5e0603.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -303,15 +303,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\build\\static\\js\\main.7e087c24.js"
+      "OriginalItemSpec": "wwwroot\\build\\static\\js\\main.5e5e0603.js"
     },
     {
-      "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\js\\main.7e087c24.js.LICENSE.txt",
+      "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\js\\main.5e5e0603.js.LICENSE.txt",
       "SourceId": "LoginApi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\",
       "BasePath": "_content/LoginApi",
-      "RelativePath": "build/static/js/main.7e087c24.js.LICENSE.txt",
+      "RelativePath": "build/static/js/main.5e5e0603.js.LICENSE.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -320,15 +320,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\build\\static\\js\\main.7e087c24.js.LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\build\\static\\js\\main.5e5e0603.js.LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\js\\main.7e087c24.js.map",
+      "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\js\\main.5e5e0603.js.map",
       "SourceId": "LoginApi",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\",
       "BasePath": "_content/LoginApi",
-      "RelativePath": "build/static/js/main.7e087c24.js.map",
+      "RelativePath": "build/static/js/main.5e5e0603.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -337,7 +337,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\build\\static\\js\\main.7e087c24.js.map"
+      "OriginalItemSpec": "wwwroot\\build\\static\\js\\main.5e5e0603.js.map"
     },
     {
       "Identity": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\Backend\\wwwroot\\build\\static\\media\\infopagina.d20028179e72149bc77b.PNG",
