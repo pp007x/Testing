@@ -12,16 +12,17 @@ public class DatabaseSeeder
         this.dbContext = dbContext;
     }
 
-    public void SeedData()
-    {
-        SeedCompanies();
-        SeedOnderwerpen();
-        SeedQuestions();
-        SeedUsers();
-        SeedTotalScores();
-        SeedQuestionOpen();
-        SeedAnswerOpen();
-    }
+public void SeedData()
+{
+    SeedCompanies();
+    SeedOnderwerpen();
+    SeedQuestions();
+    SeedUsers();
+    SeedTotalScores();
+    SeedQuestionOpen();
+    SeedAnswerOpen();
+    SeedLinks();
+}
 
     private void SeedCompanies()
     {
@@ -451,6 +452,40 @@ private void SeedQuestionOpen()
     dbContext.QuestionOpen.AddRange(questionOpen);
     dbContext.SaveChanges();
 }
+
+private void SeedLinks()
+{
+    var links = new List<Link>
+    {
+        new Link
+        {
+            Id = 1,
+            Webadress = "https://company1.com",
+            Name = "Company 1 Link",
+            CompanyId = 1
+        },
+        new Link
+        {
+            Id = 2,
+            Webadress = "https://company2.com",
+            Name = "Company 2 Link",
+            CompanyId = 2
+        },
+        new Link
+        {
+            Id = 3,
+            Webadress = "https://company3.com",
+            Name = "Company 3 Link",
+            CompanyId = 3
+        },
+        // Add more links here as needed
+    };
+
+    dbContext.Links.AddRange(links);
+    dbContext.SaveChanges();
+}
+
+
 
 private void SeedAnswerOpen()
 {

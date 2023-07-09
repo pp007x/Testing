@@ -21,11 +21,15 @@ public class UserContext : DbContext
     public DbSet<QuestionOpen> QuestionOpen { get; set; }
 
     public DbSet<OpenAnswers> OpenAnswers { get; set; }
+    public DbSet<Link> Links { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Company>()
             .HasIndex(c => c.Name)
+            .IsUnique();
+        modelBuilder.Entity<Link>()
+            .HasIndex(c => c.CompanyId)
             .IsUnique();
     }
 }
