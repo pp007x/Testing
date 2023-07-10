@@ -62,7 +62,19 @@ public async Task<ActionResult<User>> PostUser(User user)
 }
 
 
+    [HttpGet("Username")]
+    [Authorize]
+    public ActionResult<String> GetUsername()
+    {
+        var usernameClaim = User.Identity.Name;
 
+        if (usernameClaim == null)
+        {
+            return NotFound();
+        }
+
+        return usernameClaim;
+    }
 
     [HttpGet("Profile")]
     [Authorize]

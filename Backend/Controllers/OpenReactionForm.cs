@@ -226,7 +226,6 @@ public async Task<ActionResult<IEnumerable<OpenAnswers>>> GetAnswersByUser(int i
 }
 
 
-
 [HttpPost("openanswers")]
 [Authorize]
 public async Task<ActionResult> PostOpenAnswers(List<OpenAnswerDTO> openAnswerDTOs)
@@ -262,7 +261,8 @@ public async Task<ActionResult> PostOpenAnswers(List<OpenAnswerDTO> openAnswerDT
         QuestionOpenId = dto.QuestionId,
         AnswerText = dto.AnswerText,
         UserId = loggedInUserId,
-        Session = newSession  // assign the session to the answer
+        Session = newSession,  // assign the session to the answer
+        Date = DateOnly.FromDateTime(DateTime.Today)  // set the date to the current date
     }).ToList();
 
     await _context.OpenAnswers.AddRangeAsync(openAnswers);
@@ -270,5 +270,7 @@ public async Task<ActionResult> PostOpenAnswers(List<OpenAnswerDTO> openAnswerDT
 
     return Ok();
 }
+
+
 
     }}

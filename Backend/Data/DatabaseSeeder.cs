@@ -489,6 +489,8 @@ private void SeedLinks()
 
 private void SeedAnswerOpen()
 {
+    var specificDate = new DateOnly(2023, 7, 3);  // Year, Month, Day
+
     var answerOpen = new List<OpenAnswers>
     {
         new OpenAnswers
@@ -497,7 +499,8 @@ private void SeedAnswerOpen()
             QuestionOpenId = 1,
             AnswerText = "Open Answer 1",
             UserId = 39,
-            Session = 1
+            Session = 1,
+            Date = specificDate  // set the date to 3-07-2023
         },
         new OpenAnswers
         {
@@ -505,7 +508,8 @@ private void SeedAnswerOpen()
             QuestionOpenId = 2,
             AnswerText = "Open Answer 2",
             UserId = 39,
-            Session = 1
+            Session = 1,
+            Date = specificDate  // set the date to 3-07-2023
         }
     };
 

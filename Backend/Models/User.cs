@@ -22,6 +22,7 @@ public class OpenAnswers {
     public int QuestionOpenId { get; set; }
     public string AnswerText { get; set; }
     public int Session { get; set; }
+    public DateOnly Date { get; set; }
 }
 
 public class TotalScore
