@@ -41,6 +41,28 @@ namespace LoginApi.Controllers
             return link;
 }
 
+[HttpGet("{companyId}")]
+[Authorize(Roles = "Admin")]
+public async Task<ActionResult<Link>> GetLink(int companyId)
+{
+    var company = await _context.Companies.FindAsync(companyId);
+    
+    if (company == null)
+    {
+        return NotFound();
+    }
+
+    var link = await _context.Links.FindAsync(companyId);
+
+    if (link == null)
+    {
+        return NotFound();
+    }
+
+    return link;
+}
+
+
 [HttpPost]
 [Authorize(Roles = "Admin")]
 public async Task<ActionResult<Link>> PostLink(Link link)
@@ -51,8 +73,9 @@ public async Task<ActionResult<Link>> PostLink(Link link)
         if (existingLink != null)
         {
             // If a link with the same companyId exists, update the existing link
-            _context.Entry(existingLink).CurrentValues.SetValues(link);
-            existingLink.Id = existingLink.Id; // Ensure the ID remains the same
+            existingLink.Webadress = link.Webadress;
+            existingLink.Name = link.Name;
+            existingLink.CompanyId = link.CompanyId;
         }
         else
         {
@@ -69,6 +92,7 @@ public async Task<ActionResult<Link>> PostLink(Link link)
 
     return CreatedAtAction("GetLink", new { id = link.Id }, link);
 }
+
 
 
     }

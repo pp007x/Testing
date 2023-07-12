@@ -490,7 +490,7 @@ private void SeedLinks()
 
 private void SeedAnswerOpen()
 {
-    var specificDate = new DateOnly(2023, 7, 3);  // Year, Month, Day
+    var specificDate = new DateTime(2023, 7, 3, 10, 30, 0);  // Year, Month, Day, Hour, Minute, Second
 
     var answerOpen = new List<OpenAnswers>
     {
@@ -501,7 +501,7 @@ private void SeedAnswerOpen()
             AnswerText = "Open Answer 1",
             UserId = 39,
             Session = 1,
-            Date = specificDate  // set the date to 3-07-2023
+            Date = specificDate  // set the date and time
         },
         new OpenAnswers
         {
@@ -510,13 +510,14 @@ private void SeedAnswerOpen()
             AnswerText = "Open Answer 2",
             UserId = 39,
             Session = 1,
-            Date = specificDate  // set the date to 3-07-2023
+            Date = specificDate  // set the date and time
         }
     };
 
     dbContext.OpenAnswers.AddRange(answerOpen);
     dbContext.SaveChanges();
 }
+
 
 
 private void SeedTotalScores()
@@ -534,12 +535,22 @@ private void SeedTotalScores()
             ScoreValueC = random.Next(1, 41),
             ScoreValueS = random.Next(1, 41),
             ScoreValueI = random.Next(1, 41),
-            ScoreValueD = random.Next(1, 41)
+            ScoreValueD = random.Next(1, 41),
+            Date = RandomDay(random) // Added line
         });
     }
 
     dbContext.TotalScores.AddRange(totalScores);
     dbContext.SaveChanges();
 }
+
+// Method to generate random date
+private DateOnly RandomDay(Random gen)
+{
+    DateTime start = DateTime.Today.AddYears(-2);
+    int range = ((TimeSpan)(DateTime.Today - start)).Days;
+    return DateOnly.FromDateTime(start.AddDays(gen.Next(range)));
+}
+
 
 }

@@ -23,6 +23,8 @@ public class UserContext : DbContext
     public DbSet<OpenAnswers> OpenAnswers { get; set; }
     public DbSet<Link> Links { get; set; }
 
+    public DbSet<HulpVakjes> HulpVakjes { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Company>()

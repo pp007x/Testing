@@ -45,7 +45,7 @@ public async Task<ActionResult<User>> PostUser(User user)
 
         // Check if the user with the provided username already exists within the same company
         var existingUser = await _context.Users
-            .SingleOrDefaultAsync(x => x.Username == user.Username && x.CompanyId == user.CompanyId);
+            .SingleOrDefaultAsync(x => x.Username == user.Username);
         if (existingUser != null)
         {
             return BadRequest("Username already exists in the same company");

@@ -230,6 +230,7 @@ public async Task<ActionResult<IEnumerable<OpenAnswers>>> GetAnswersByUser(int i
 [Authorize]
 public async Task<ActionResult> PostOpenAnswers(List<OpenAnswerDTO> openAnswerDTOs)
 {
+    
     var nameIdentifierClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
     if (nameIdentifierClaim == null)
     {
@@ -262,14 +263,14 @@ public async Task<ActionResult> PostOpenAnswers(List<OpenAnswerDTO> openAnswerDT
         AnswerText = dto.AnswerText,
         UserId = loggedInUserId,
         Session = newSession,  // assign the session to the answer
-        Date = DateOnly.FromDateTime(DateTime.Today)  // set the date to the current date
+        Date = DateTime.Now  // set the date to the current datetime
     }).ToList();
-
     await _context.OpenAnswers.AddRangeAsync(openAnswers);
     await _context.SaveChangesAsync();
 
     return Ok();
 }
+
 
 
 
