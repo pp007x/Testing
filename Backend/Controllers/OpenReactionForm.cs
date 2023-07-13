@@ -304,7 +304,7 @@ public async Task<IActionResult> GetUpdatedWordDocument()
     {
         Console.WriteLine(answer.AnswerText);
         Console.WriteLine(answerCount);
-        replacements.Add($"Answer{answerCount++}", answer.AnswerText);
+        replacements.Add($"answer{answerCount++}", answer.AnswerText);
     }
 
     UpdateWordDocument(filePath, newFilePath, replacements);
