@@ -32,6 +32,7 @@ builder.Services.AddCors(options =>
             // builder.WithOrigins("https://temptestedwin.azurewebsites.net")
             builder.WithOrigins("https://discprototype.azurewebsites.net")
             // builder.WithOrigins("http://localhost:3000")
+            // builder.WithOrigins("http://localhost:5162")
             
                    .AllowAnyHeader()
                    .AllowAnyMethod();
@@ -135,6 +136,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 // Adding fallback route here.
-app.MapFallbackToFile("/index.html");
+app.MapFallbackToFile("/build/index.html");
 
 app.Run();
