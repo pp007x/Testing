@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gscuJ2O/AlqqdqgkLP9iLDnOR1tsOrYdrFTaTNJUgaPaQpP4SP8fDwzO58kttChmupR7jM4cNs+bQ5kiPTTSlQ==",
+  "dgSpecHash": "EKSCheyoTbHhJasoZRl3QSKw4vp3bntS561zb59tz8s9Gbt78ruCWeCDzo0+NAB1CCxsoh6CY0fo0Cm5Bc7Sgw==",
   "success": true,
   "projectFilePath": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\LoginApi.csproj",
   "expectedPackageFiles": [
@@ -50,6 +50,7 @@
     "C:\\Users\\steph\\.nuget\\packages\\sharpziplib\\1.3.3\\sharpziplib.1.3.3.nupkg.sha512",
     "C:\\Users\\steph\\.nuget\\packages\\sixlabors.fonts\\1.0.0-beta19\\sixlabors.fonts.1.0.0-beta19.nupkg.sha512",
     "C:\\Users\\steph\\.nuget\\packages\\sixlabors.imagesharp\\2.1.4\\sixlabors.imagesharp.2.1.4.nupkg.sha512",
+    "C:\\Users\\steph\\.nuget\\packages\\spire.doc\\11.4.12\\spire.doc.11.4.12.nupkg.sha512",
     "C:\\Users\\steph\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.4\\sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
     "C:\\Users\\steph\\.nuget\\packages\\sqlitepclraw.core\\2.1.4\\sqlitepclraw.core.2.1.4.nupkg.sha512",
     "C:\\Users\\steph\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.4\\sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",
@@ -97,6 +98,16 @@
       "warningLevel": 1,
       "message": "LoginApi depends on iTextSharp (>= 4.1.6) but iTextSharp 4.1.6 was not found. An approximate best match of iTextSharp 5.0.5 was resolved.",
       "libraryId": "iTextSharp",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "LoginApi depends on Spire.Doc (>= 11.4.6) but Spire.Doc 11.4.6 was not found. An approximate best match of Spire.Doc 11.4.12 was resolved.",
+      "libraryId": "Spire.Doc",
       "targetGraphs": [
         "net7.0"
       ]
