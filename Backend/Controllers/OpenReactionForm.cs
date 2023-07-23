@@ -308,7 +308,7 @@ public async Task<IActionResult> GetUpdatedWordDocument()
         replacements.Add($"Answer{answerCount++}", answer.AnswerText);
     }
 
-    // UpdateWordDocument(filePath, newFilePath, replacements);
+    UpdateWordDocument(filePath, newFilePath, replacements);
 
     var updatedWordDocumentBytes = System.IO.File.ReadAllBytes(newFilePath);
     return File(updatedWordDocumentBytes, "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
