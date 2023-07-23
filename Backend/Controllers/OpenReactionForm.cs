@@ -8,7 +8,7 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 // using NPOI.XWPF.UserModel;
 // using DocumentFormat.OpenXml.Packaging;
-// using OpenXmlPowerTools;
+using OpenXmlPowerTools;
 using System.Xml.Linq;
 
 namespace LoginApi.Controllers
@@ -276,7 +276,7 @@ public void UpdateWordDocument(string filePath, string newFilePath, Dictionary<s
         foreach (var replacement in replacements)
         {
             // Perform the replacements on the document
-            // TextReplacer.SearchAndReplace(wordDoc, replacement.Key, replacement.Value, false);
+            TextReplacer.SearchAndReplace(wordDoc, replacement.Key, replacement.Value, false);
         }
     }
 }
