@@ -9,11 +9,13 @@
       "LoginApi/1.0.0": {
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
+          "FreeSpire.Doc": "7.1.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.7",
           "Microsoft.AspNetCore.OpenApi": "7.0.1",
           "Microsoft.EntityFrameworkCore.Design": "7.0.7",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.7",
           "Swashbuckle.AspNetCore": "6.4.0",
+          "System.Drawing.Common": "7.0.0",
           "System.IdentityModel.Tokens.Jwt": "6.31.0"
         },
         "runtime": {
@@ -25,6 +27,26 @@
           "lib/net6.0/BCrypt.Net-Next.dll": {
             "assemblyVersion": "4.0.3.0",
             "fileVersion": "4.0.3.0"
+          }
+        }
+      },
+      "FreeSpire.Doc/7.1.0": {
+        "dependencies": {
+          "System.Drawing.Common": "7.0.0",
+          "System.Text.Encoding.CodePages": "4.6.0-preview.18571.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Spire.Doc.dll": {
+            "assemblyVersion": "7.1.5.41320",
+            "fileVersion": "7.1.5.41320"
+          },
+          "lib/netstandard2.0/Spire.License.dll": {
+            "assemblyVersion": "1.3.7.320",
+            "fileVersion": "1.3.7.320"
+          },
+          "lib/netstandard2.0/Spire.Pdf.dll": {
+            "assemblyVersion": "5.1.7.20320",
+            "fileVersion": "5.1.7.20320"
           }
         }
       },
@@ -263,13 +285,29 @@
           }
         }
       },
-      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Microsoft.NETCore.Platforms/2.0.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
       "Microsoft.OpenApi/1.4.3": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
             "assemblyVersion": "1.4.3.0",
             "fileVersion": "1.4.3.0"
+          }
+        }
+      },
+      "Microsoft.Win32.SystemEvents/7.0.0": {
+        "runtime": {
+          "lib/net7.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
           }
         }
       },
@@ -483,6 +521,25 @@
           }
         }
       },
+      "System.Drawing.Common/7.0.0": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "7.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net7.0/System.Drawing.Common.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        }
+      },
       "System.IdentityModel.Tokens.Jwt/6.31.0": {
         "dependencies": {
           "Microsoft.IdentityModel.JsonWebTokens": "6.31.0",
@@ -498,16 +555,23 @@
       "System.Memory/4.5.3": {},
       "System.Runtime/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.0.0",
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
+      "System.Runtime.CompilerServices.Unsafe/4.6.0-preview.18571.3": {},
       "System.Security.Cryptography.Cng/4.5.0": {},
       "System.Text.Encoding/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Platforms": "2.0.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Text.Encoding.CodePages/4.6.0-preview.18571.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.6.0-preview.18571.3"
         }
       },
       "System.Text.Encodings.Web/7.0.0": {},
@@ -530,6 +594,13 @@
       "sha512": "sha512-W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
       "path": "bcrypt.net-next/4.0.3",
       "hashPath": "bcrypt.net-next.4.0.3.nupkg.sha512"
+    },
+    "FreeSpire.Doc/7.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jW3Y20BezBh+vupOCRlLpsyPYc9/f9Vdiy2Ykg68Edle/kUqgf9fsw/9aOT3IEHqk/CCi7JWdodEoDmDtcWZrg==",
+      "path": "freespire.doc/7.1.0",
+      "hashPath": "freespire.doc.7.1.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -734,12 +805,12 @@
       "path": "microsoft.identitymodel.tokens/6.31.0",
       "hashPath": "microsoft.identitymodel.tokens.6.31.0.nupkg.sha512"
     },
-    "Microsoft.NETCore.Platforms/1.1.0": {
+    "Microsoft.NETCore.Platforms/2.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
-      "path": "microsoft.netcore.platforms/1.1.0",
-      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+      "sha512": "sha512-VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
+      "path": "microsoft.netcore.platforms/2.0.0",
+      "hashPath": "microsoft.netcore.platforms.2.0.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Targets/1.1.0": {
       "type": "package",
@@ -754,6 +825,13 @@
       "sha512": "sha512-rURwggB+QZYcSVbDr7HSdhw/FELvMlriW10OeOzjPT7pstefMo7IThhtNtDudxbXhW+lj0NfX72Ka5EDsG8x6w==",
       "path": "microsoft.openapi/1.4.3",
       "hashPath": "microsoft.openapi.1.4.3.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2nXPrhdAyAzir0gLl8Yy8S5Mnm/uBSQQA7jEsILOS1MTyS7DbmV1NgViMtvV1sfCD1ebITpNwb1NIinKeJgUVQ==",
+      "path": "microsoft.win32.systemevents/7.0.0",
+      "hashPath": "microsoft.win32.systemevents.7.0.0.nupkg.sha512"
     },
     "Mono.TextTemplating/2.2.1": {
       "type": "package",
@@ -825,6 +903,13 @@
       "path": "system.codedom/4.4.0",
       "hashPath": "system.codedom.4.4.0.nupkg.sha512"
     },
+    "System.Drawing.Common/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KIX+oBU38pxkKPxvLcLfIkOV5Ien8ReN78wro7OF5/erwcmortzeFx+iBswlh2Vz6gVne0khocQudGwaO1Ey6A==",
+      "path": "system.drawing.common/7.0.0",
+      "hashPath": "system.drawing.common.7.0.0.nupkg.sha512"
+    },
     "System.IdentityModel.Tokens.Jwt/6.31.0": {
       "type": "package",
       "serviceable": true,
@@ -846,6 +931,13 @@
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
     },
+    "System.Runtime.CompilerServices.Unsafe/4.6.0-preview.18571.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RlKzUOKfzOvQsexDiEai+zgs5ZDM75D9awG+hPrAPq6iChW2opzjPruDwrhVq1n0HrCPbTfvrL6A6nL2+rDpnA==",
+      "path": "system.runtime.compilerservices.unsafe/4.6.0-preview.18571.3",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.6.0-preview.18571.3.nupkg.sha512"
+    },
     "System.Security.Cryptography.Cng/4.5.0": {
       "type": "package",
       "serviceable": true,
@@ -859,6 +951,13 @@
       "sha512": "sha512-BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
       "path": "system.text.encoding/4.3.0",
       "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
+    },
+    "System.Text.Encoding.CodePages/4.6.0-preview.18571.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MYFHOtbSfHdWXtG8gqqfFdEfy6mkIGqyIeI1H8U5ChlSx5/VW595B7JAtbX942lYUHzC6CXCcoILD7scN05c9Q==",
+      "path": "system.text.encoding.codepages/4.6.0-preview.18571.3",
+      "hashPath": "system.text.encoding.codepages.4.6.0-preview.18571.3.nupkg.sha512"
     },
     "System.Text.Encodings.Web/7.0.0": {
       "type": "package",
