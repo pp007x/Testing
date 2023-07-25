@@ -30,8 +30,8 @@ builder.Services.AddCors(options =>
         builder =>
         {
             // builder.WithOrigins("https://temptestedwin.azurewebsites.net")
-            builder.WithOrigins("https://discprototype.azurewebsites.net")
-            // builder.WithOrigins("http://localhost:3000")
+            // builder.WithOrigins("https://discprototype.azurewebsites.net")
+            builder.WithOrigins("http://localhost:3000")
             // builder.WithOrigins("http://localhost:5162")
             
                    .AllowAnyHeader()
