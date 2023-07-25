@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "h9zG6Mvrko181a2Tb/Vw9cJcUHD1kyvJCHgf+A3C4mSqPhbIm8lq+Rysw0FGACvR9buvmfuvJFmR/ThQIuwu3g==",
+  "dgSpecHash": "cR6l1hxzNDZccF9zbsBrR4SODNCJ42YAN8intnrwvCr5AwsbxRm0KK2JoXhUKHjdSWeNPP1MELFlbqGI9k4ZJw==",
   "success": true,
   "projectFilePath": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\LoginApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\steph\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
-    "C:\\Users\\steph\\.nuget\\packages\\documentformat.openxml\\2.20.0\\documentformat.openxml.2.20.0.nupkg.sha512",
     "C:\\Users\\steph\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\steph\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.7\\microsoft.aspnetcore.authentication.jwtbearer.7.0.7.nupkg.sha512",
     "C:\\Users\\steph\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.1\\microsoft.aspnetcore.openapi.7.0.1.nupkg.sha512",
@@ -49,7 +48,6 @@
     "C:\\Users\\steph\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
     "C:\\Users\\steph\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\steph\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.31.0\\system.identitymodel.tokens.jwt.6.31.0.nupkg.sha512",
-    "C:\\Users\\steph\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512",
     "C:\\Users\\steph\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\steph\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\steph\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
