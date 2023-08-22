@@ -10,8 +10,6 @@ using System.Xml.Linq;
 // using NPOI.XWPF.UserModel;
 // using DocumentFormat.OpenXml.Packaging;
 // using OpenXmlPowerTools;
-using Spire.Doc;
-
 namespace LoginApi.Controllers
 {
     [Route("api/[controller]")]
@@ -266,22 +264,21 @@ namespace LoginApi.Controllers
         }
 
 
-public void UpdateWordDocument(string filePath, string newFilePath, Dictionary<string, string> replacements)
-{
-    // Load the document from disk.
-    Document document = new Document();
-    document.LoadFromFile(filePath);
+// public void UpdateWordDocument(string filePath, string newFilePath, Dictionary<string, string> replacements)
+// {
+//     // Copy the original document to a new file
+//     System.IO.File.Copy(filePath, newFilePath, true);
 
-    // Loop through each replacement and replace the text.
-    foreach (var replacement in replacements)
-    {
-        document.Replace(replacement.Key, replacement.Value, true, false);
-    }
-
-    // Save the document.
-    document.SaveToFile(newFilePath, FileFormat.Docx2013);
-}
-
+//     // Now open and modify the copy, not the original
+//     using (WordprocessingDocument wordDoc = WordprocessingDocument.Open(newFilePath, true))
+//     {
+//         foreach (var replacement in replacements)
+//         {
+//             // Perform the replacements on the document
+//             TextReplacer.SearchAndReplace(wordDoc, replacement.Key, replacement.Value, false);
+//         }
+//     }
+// }
 
 
 [HttpGet("updatedWordDocument")]
@@ -310,7 +307,7 @@ public async Task<IActionResult> GetUpdatedWordDocument()
         replacements.Add($"Answer{answerCount++}", answer.AnswerText);
     }
 
-    UpdateWordDocument(filePath, newFilePath, replacements);
+    // UpdateWordDocument(filePath, newFilePath, replacements);
 
     var updatedWordDocumentBytes = System.IO.File.ReadAllBytes(newFilePath);
     return File(updatedWordDocumentBytes, "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
