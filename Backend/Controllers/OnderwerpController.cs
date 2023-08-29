@@ -76,7 +76,17 @@ public async Task<ActionResult<Onderwerp>> GetOnderwerpForCurrentUser()
     return onderwerp;
 }
 
+[HttpGet("welkom")]
+public async Task<ActionResult<Onderwerp>> GetWelkom()
+{
+    var onderwerp = await _context.Onderwerpen.FirstOrDefaultAsync(o => o.Name == "Welkom!");
+    if (onderwerp == null)
+    {
+        return NotFound();
+    }
 
+    return onderwerp;
+}
 
 [HttpGet("user/{userId}")]
 [Authorize(Roles = "Admin")]
