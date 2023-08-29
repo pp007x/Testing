@@ -29,12 +29,12 @@
       "PackagePath": "staticwebassets\\build\\robots.txt"
     },
     {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\css\\main.35404191.css",
-      "PackagePath": "staticwebassets\\build\\static\\css\\main.35404191.css"
+      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\css\\main.278003cb.css",
+      "PackagePath": "staticwebassets\\build\\static\\css\\main.278003cb.css"
     },
     {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\css\\main.35404191.css.map",
-      "PackagePath": "staticwebassets\\build\\static\\css\\main.35404191.css.map"
+      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\css\\main.278003cb.css.map",
+      "PackagePath": "staticwebassets\\build\\static\\css\\main.278003cb.css.map"
     },
     {
       "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\513.a903845b.chunk.js",
@@ -65,20 +65,24 @@
       "PackagePath": "staticwebassets\\build\\static\\js\\787.a743e0dc.chunk.js.map"
     },
     {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.ab1d73f8.js",
-      "PackagePath": "staticwebassets\\build\\static\\js\\main.ab1d73f8.js"
+      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.34742e78.js",
+      "PackagePath": "staticwebassets\\build\\static\\js\\main.34742e78.js"
     },
     {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.ab1d73f8.js.LICENSE.txt",
-      "PackagePath": "staticwebassets\\build\\static\\js\\main.ab1d73f8.js.LICENSE.txt"
+      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.34742e78.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\build\\static\\js\\main.34742e78.js.LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.ab1d73f8.js.map",
-      "PackagePath": "staticwebassets\\build\\static\\js\\main.ab1d73f8.js.map"
+      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.34742e78.js.map",
+      "PackagePath": "staticwebassets\\build\\static\\js\\main.34742e78.js.map"
     },
     {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\media\\LoginBackground.a6695b7bdd8b803907ad.jpg",
-      "PackagePath": "staticwebassets\\build\\static\\media\\LoginBackground.a6695b7bdd8b803907ad.jpg"
+      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\media\\HigtechLogo.819991bc9bf94b168101.png",
+      "PackagePath": "staticwebassets\\build\\static\\media\\HigtechLogo.819991bc9bf94b168101.png"
+    },
+    {
+      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\media\\LoginBackground.f4381791eae394b7ccd4.jpg",
+      "PackagePath": "staticwebassets\\build\\static\\media\\LoginBackground.f4381791eae394b7ccd4.jpg"
     },
     {
       "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\media\\infopagina.7766772a1a706d69ee10.PNG",
