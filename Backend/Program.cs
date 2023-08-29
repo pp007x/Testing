@@ -31,8 +31,8 @@ builder.Services.AddCors(options =>
         {
             // builder.WithOrigins("https://temptestedwin.azurewebsites.net")
             // builder.WithOrigins("https://discproto.azurewebsites.net")
-            builder.WithOrigins("https://questproto.azurewebsites.net")
-            // builder.WithOrigins("http://localhost:3000")
+            // builder.WithOrigins("https://questproto.azurewebsites.net")
+            builder.WithOrigins("http://localhost:3000")
             
             
                    .AllowAnyHeader()
