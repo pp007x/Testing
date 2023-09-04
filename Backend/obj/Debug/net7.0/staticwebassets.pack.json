@@ -1,14 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\asset-manifest.json",
-      "PackagePath": "staticwebassets\\build\\asset-manifest.json"
-    },
-    {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\index.html",
-      "PackagePath": "staticwebassets\\build\\index.html"
-    },
-    {
       "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\logo.jpeg",
       "PackagePath": "staticwebassets\\build\\logo.jpeg"
     },
@@ -27,70 +19,6 @@
     {
       "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\robots.txt",
       "PackagePath": "staticwebassets\\build\\robots.txt"
-    },
-    {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\css\\main.9a0c882f.css",
-      "PackagePath": "staticwebassets\\build\\static\\css\\main.9a0c882f.css"
-    },
-    {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\css\\main.9a0c882f.css.map",
-      "PackagePath": "staticwebassets\\build\\static\\css\\main.9a0c882f.css.map"
-    },
-    {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\513.a903845b.chunk.js",
-      "PackagePath": "staticwebassets\\build\\static\\js\\513.a903845b.chunk.js"
-    },
-    {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\513.a903845b.chunk.js.map",
-      "PackagePath": "staticwebassets\\build\\static\\js\\513.a903845b.chunk.js.map"
-    },
-    {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\703.7e23af80.chunk.js",
-      "PackagePath": "staticwebassets\\build\\static\\js\\703.7e23af80.chunk.js"
-    },
-    {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\703.7e23af80.chunk.js.LICENSE.txt",
-      "PackagePath": "staticwebassets\\build\\static\\js\\703.7e23af80.chunk.js.LICENSE.txt"
-    },
-    {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\703.7e23af80.chunk.js.map",
-      "PackagePath": "staticwebassets\\build\\static\\js\\703.7e23af80.chunk.js.map"
-    },
-    {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\787.a743e0dc.chunk.js",
-      "PackagePath": "staticwebassets\\build\\static\\js\\787.a743e0dc.chunk.js"
-    },
-    {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\787.a743e0dc.chunk.js.map",
-      "PackagePath": "staticwebassets\\build\\static\\js\\787.a743e0dc.chunk.js.map"
-    },
-    {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.c2aa995e.js",
-      "PackagePath": "staticwebassets\\build\\static\\js\\main.c2aa995e.js"
-    },
-    {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.c2aa995e.js.LICENSE.txt",
-      "PackagePath": "staticwebassets\\build\\static\\js\\main.c2aa995e.js.LICENSE.txt"
-    },
-    {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.c2aa995e.js.map",
-      "PackagePath": "staticwebassets\\build\\static\\js\\main.c2aa995e.js.map"
-    },
-    {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\media\\HigtechLogo.819991bc9bf94b168101.png",
-      "PackagePath": "staticwebassets\\build\\static\\media\\HigtechLogo.819991bc9bf94b168101.png"
-    },
-    {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\media\\LoginBackground.f4381791eae394b7ccd4.jpg",
-      "PackagePath": "staticwebassets\\build\\static\\media\\LoginBackground.f4381791eae394b7ccd4.jpg"
-    },
-    {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\media\\infopagina.7766772a1a706d69ee10.PNG",
-      "PackagePath": "staticwebassets\\build\\static\\media\\infopagina.7766772a1a706d69ee10.PNG"
-    },
-    {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\media\\infopagina2.2fedce62bf52ff451c39.PNG",
-      "PackagePath": "staticwebassets\\build\\static\\media\\infopagina2.2fedce62bf52ff451c39.PNG"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.LoginApi.Microsoft.AspNetCore.StaticWebAssets.props",
