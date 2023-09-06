@@ -27,6 +27,49 @@ public class TotalScoresController : ControllerBase
         _configuration = configuration;
     }
 
+[HttpGet("user/me/dates")]
+[Authorize]
+public async Task<ActionResult<List<object>>> GetTotalScoreDatesAndIdsByLoggedInUser()
+{
+    var nameIdentifierClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+    if (nameIdentifierClaim == null)
+    {
+        return BadRequest("No user is currently logged in.");
+    }
+
+    if (!int.TryParse(nameIdentifierClaim.Value, out var loggedInUserId))
+    {
+        return BadRequest("Invalid user ID.");
+    }
+
+    var datesAndIds = await _context.TotalScores
+                                     .Where(score => score.UserId == loggedInUserId)
+                                     .Select(score => new { score.Date, score.Id })
+                                     .ToListAsync();
+
+    return Ok(datesAndIds);
+}
+
+
+[HttpGet("user/me/dates/{id}")]
+[Authorize]
+public async Task<ActionResult<List<object>>> GetTotalScoreDatesAndIdsByLoggedInUser(int id)
+{
+    var nameIdentifierClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+    if (nameIdentifierClaim == null)
+    {
+        return BadRequest("No user is currently logged in.");
+    }
+
+    var datesAndIds = await _context.TotalScores
+                                     .Where(score => score.UserId == id)
+                                     .Select(score => new { score.Date, score.Id })
+                                     .ToListAsync();
+
+    return Ok(datesAndIds);
+}
+
+
 [HttpPost]
 [Authorize]
 public async Task<IActionResult> PostTotalScore(TotalScore totalScore)
@@ -77,6 +120,75 @@ public async Task<IActionResult> PostTotalScore(TotalScore totalScore)
 
     return CreatedAtAction(nameof(GetTotalScoreByUser), new { id = totalScore.Id }, totalScore);
 }
+
+
+[HttpGet("user/me/pp/{id}")]
+[Authorize]
+public async Task<ActionResult<TotalScore>> Pp(int id)
+{
+
+    // Find the TotalScore by ID and make sure it belongs to the logged-in user
+    var totalScore = await _context.TotalScores
+                                   .FirstOrDefaultAsync(score => score.Id == id && score.Id == id);
+
+    if (totalScore == null)
+    {
+        return NotFound();
+    }
+
+    return totalScore;
+}
+
+
+
+
+[HttpGet("user/me/{id}")]
+[Authorize]
+public async Task<ActionResult<TotalScore>> GetTotalScoreByIdForLoggedInUser(int id)
+{
+    var nameIdentifierClaim = HttpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+    if (nameIdentifierClaim == null)
+    {
+        return BadRequest("No user is currently logged in.");
+    }
+
+    if (!int.TryParse(nameIdentifierClaim.Value, out var loggedInUserId))
+    {
+        return BadRequest("Invalid user ID.");
+    }
+
+    // Find the TotalScore by ID and make sure it belongs to the logged-in user
+    var totalScore = await _context.TotalScores
+                                   .FirstOrDefaultAsync(score => score.Id == id && score.UserId == loggedInUserId);
+
+    if (totalScore == null)
+    {
+        return NotFound();
+    }
+
+    return totalScore;
+}
+
+    // API to get the score of any user by a specific date (Admin and Mod only)
+    [HttpGet("user/{id}/{date}")]
+    [Authorize(Roles = "Admin, Mod")]
+    public async Task<ActionResult<TotalScore>> GetTotalScoreByDateForUser(int id, string date)
+    {
+        // Parsing date from string to DateOnly
+        if (!DateOnly.TryParse(date, out var parsedDate))
+        {
+            return BadRequest("Invalid date format.");
+        }
+
+        var totalScore = await _context.TotalScores.FirstOrDefaultAsync(score => score.UserId == id && score.Date == parsedDate);
+
+        if (totalScore == null)
+        {
+            return NotFound();
+        }
+
+        return totalScore;
+    }
 
 
 [HttpGet("user/me")]
