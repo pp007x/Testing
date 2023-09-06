@@ -26,14 +26,14 @@ namespace LoginApi.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, Mod")]
         public async Task<ActionResult<IEnumerable<Company>>> GetCompanies()
         {
             return await _context.Companies.ToListAsync();
         }
 
 [HttpPost]
-[Authorize(Roles = "Admin")]
+[Authorize(Roles = "Admin, Mod")]
 public async Task<ActionResult<Company>> PostCompany(Company company)
 {
     try
@@ -102,7 +102,7 @@ public async Task<ActionResult<IEnumerable<User>>> GetUsersForCompany()
 
 
         [HttpGet("{id}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, Mod")]
         public async Task<ActionResult<Company>> GetCompany(int id)
         {
             var company = await _context.Companies.FindAsync(id);
@@ -116,7 +116,7 @@ public async Task<ActionResult<IEnumerable<User>>> GetUsersForCompany()
         }
 
         [HttpGet("{companyId}/users")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, Mod")]
         public async Task<ActionResult<IEnumerable<User>>> GetUsersForCompany(int companyId)
         {
             var users = await _context.Users.Where(u => u.CompanyId == companyId).ToListAsync();
@@ -144,7 +144,7 @@ public async Task<ActionResult<Company>> GetCompanyByCode(string companyCode)
 
         // CompaniesController.cs
 [HttpDelete("{id}")]
-[Authorize(Roles = "Admin")]
+[Authorize(Roles = "Admin, Mod")]
 public async Task<IActionResult> DeleteCompany(int id)
 {
     var company = await _context.Companies.FindAsync(id);

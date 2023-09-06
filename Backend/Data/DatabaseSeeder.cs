@@ -267,6 +267,7 @@ private void SeedOnderwerpen()
                 Password = "$2a$11$wZX5t0Iln2z3LMp93Z0dUeja6Mhkx2Tv7uKzcrAk3nsvYA3uTw8Dm",
                 CompanyId = 3,
                 IsAdmin = false,
+                IsMod = true,
                 Box = "Sd"
             },
             new User

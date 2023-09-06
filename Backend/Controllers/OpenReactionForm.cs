@@ -55,7 +55,7 @@ namespace LoginApi.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, Mod")]
         public async Task<IActionResult> DeleteOpenQuestion(int id)
         {
             var questionOpen = await _context.QuestionOpen.FindAsync(id);
@@ -101,7 +101,7 @@ namespace LoginApi.Controllers
         }
 
         [HttpPut]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, Mod")]
         public async Task<IActionResult> UpdateOpenQuestions(List<QuestionOpenDTO> questionDtoList)
         {
             foreach (var questionDto in questionDtoList)
@@ -206,7 +206,7 @@ namespace LoginApi.Controllers
         }
 
         [HttpGet("user/{id}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, Mod")]
         public async Task<ActionResult<IEnumerable<OpenAnswers>>> GetAnswersByUser(int id)
         {
             var userAnswers = await _context.OpenAnswers.Where(answer => answer.UserId == id).ToListAsync();

@@ -25,14 +25,14 @@ public class UsersController : ControllerBase
     }
 
     [HttpGet]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin, Mod")]
     public async Task<ActionResult<IEnumerable<User>>> GetUsers()
     {
         return await _context.Users.ToListAsync();
     }
 
 [HttpPost]
-[Authorize(Roles = "Admin")]
+[Authorize(Roles = "Admin, Mod")]
 public async Task<ActionResult<User>> PostUser(User user)
 {
     if (user.CompanyId != null)
@@ -93,7 +93,7 @@ public async Task<ActionResult<User>> PostUser(User user)
 
     // UserController.cs
 [HttpDelete("{id}")]
-[Authorize(Roles = "Admin")]
+[Authorize(Roles = "Admin, Mod")]
 public async Task<IActionResult> DeleteUser(int id)
 {
     var user = await _context.Users.FindAsync(id);
@@ -108,7 +108,7 @@ public async Task<IActionResult> DeleteUser(int id)
     return NoContent();
 }
 [HttpPost("GenerateResetToken/{id}")]
-[Authorize(Roles = "Admin")]
+[Authorize(Roles = "Admin, Mod")]
 public async Task<ActionResult> GenerateResetToken(int id)
 {
     var user = await _context.Users.FindAsync(id);

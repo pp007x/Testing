@@ -155,5 +155,3 @@ C:\Users\steph\Documents\EdwinPracticeTool\Backend\obj\Debug\net7.0\ref\LoginApi
 C:\Users\steph\Documents\EdwinPracticeTool\Backend\bin\Debug\net7.0\web.config
 C:\Users\steph\Documents\EdwinPracticeTool\Backend\bin\Debug\net7.0\LoginApi.staticwebassets.runtime.json
 C:\Users\steph\Documents\EdwinPracticeTool\Backend\bin\Debug\net7.0\BCrypt.Net-Next.dll
-C:\Users\steph\Documents\EdwinPracticeTool\backend\bin\Debug\net7.0\build\asset-manifest.json
-C:\Users\steph\Documents\EdwinPracticeTool\backend\bin\Debug\net7.0\build\manifest.json

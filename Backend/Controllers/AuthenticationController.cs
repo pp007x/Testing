@@ -84,12 +84,20 @@ public async Task<ActionResult<string>> Login(User user)
 
 private string GenerateJwtToken(User user)
 {
-    var claims = new List<Claim>
-    {
-        new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()), // assuming user.Id is the unique identifier for the user
-        new Claim(ClaimTypes.Name, user.Username),
-        new Claim(ClaimTypes.Role, user.IsAdmin ? "Admin" : "User")
-    };
+var claims = new List<Claim>
+{
+    new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()), // assuming user.Id is the unique identifier for the user
+    new Claim(ClaimTypes.Name, user.Username),
+};
+
+if (user.IsAdmin)
+    claims.Add(new Claim(ClaimTypes.Role, "Admin"));
+if (user.IsMod)
+    claims.Add(new Claim(ClaimTypes.Role, "Mod"));
+if (!user.IsAdmin && !user.IsMod)
+    claims.Add(new Claim(ClaimTypes.Role, "User"));
+
+
 
     var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
     var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

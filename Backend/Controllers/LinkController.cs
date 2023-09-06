@@ -42,7 +42,7 @@ namespace LoginApi.Controllers
 }
 
 [HttpGet("{companyId}")]
-[Authorize(Roles = "Admin")]
+[Authorize(Roles = "Admin, Mod")]
 public async Task<ActionResult<Link>> GetLink(int companyId)
 {
     var company = await _context.Companies.FindAsync(companyId);
@@ -64,7 +64,7 @@ public async Task<ActionResult<Link>> GetLink(int companyId)
 
 
 [HttpPost]
-[Authorize(Roles = "Admin")]
+[Authorize(Roles = "Admin, Mod")]
 public async Task<ActionResult<Link>> PostLink(Link link)
 {
     try

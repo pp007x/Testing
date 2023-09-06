@@ -107,7 +107,7 @@ public async Task<ActionResult<TotalScore>> GetTotalScoresByLoggedInUser()
 
 
 [HttpGet("user/{id}")]
-[Authorize(Roles = "Admin")]
+[Authorize(Roles = "Admin, Mod")]
 public async Task<ActionResult<TotalScore>> GetTotalScoreByUser(int id)
 {
     // Use the user ID to find the TotalScore

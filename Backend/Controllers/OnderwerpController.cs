@@ -89,7 +89,7 @@ public async Task<ActionResult<Onderwerp>> GetWelkom()
 }
 
 [HttpGet("user/{userId}")]
-[Authorize(Roles = "Admin")]
+[Authorize(Roles = "Admin, Mod")]
 public ActionResult<Onderwerp> GetOnderwerpForUser(int userId)
 {
     // Fetch the user
@@ -124,7 +124,7 @@ public ActionResult<Onderwerp> GetOnderwerpForUser(int userId)
 
     // OnderwerpController.cs
 [HttpGet("{id}")]
-[Authorize(Roles = "Admin")]
+[Authorize(Roles = "Admin, Mod")]
 public ActionResult<Onderwerp> GetOnderwerp(int id)
 {
     var onderwerp = _context.Onderwerpen.Find(id);
@@ -136,7 +136,7 @@ public ActionResult<Onderwerp> GetOnderwerp(int id)
 }
 
 [HttpPut("{id}")]
-[Authorize(Roles = "Admin")]
+[Authorize(Roles = "Admin, Mod")]
 public ActionResult<Onderwerp> UpdateOnderwerp(int id, Onderwerp onderwerp)
 {
     if (id != onderwerp.Id)
