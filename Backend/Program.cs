@@ -29,8 +29,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp",
         builder =>
         {
-            // builder.WithOrigins("https://temptestedwin.azurewebsites.net")
-            builder.WithOrigins("https://discproto.azurewebsites.net")
+            builder.WithOrigins("https://questappproto.azurewebsites.net")
+            // builder.WithOrigins("https://discproto.azurewebsites.net")
             // builder.WithOrigins("https://questproto.azurewebsites.net")
             // builder.WithOrigins("http://localhost:3000")
             
