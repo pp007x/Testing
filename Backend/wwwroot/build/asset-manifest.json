@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bf5906fb.css",
-    "main.js": "/static/js/main.43fe504b.js",
+    "main.css": "/static/css/main.f916a023.css",
+    "main.js": "/static/js/main.d501d49f.js",
     "static/js/703.7e23af80.chunk.js": "/static/js/703.7e23af80.chunk.js",
     "static/js/513.4b7cc869.chunk.js": "/static/js/513.4b7cc869.chunk.js",
     "static/js/787.a743e0dc.chunk.js": "/static/js/787.a743e0dc.chunk.js",
@@ -11,14 +11,14 @@
     "static/media/HigtechLogo.jpeg": "/static/media/HigtechLogo.d9d65153a8067b83bbab.jpeg",
     "static/media/HigtechLogo.png": "/static/media/HigtechLogo.970cf835285b5eb21061.png",
     "index.html": "/index.html",
-    "main.bf5906fb.css.map": "/static/css/main.bf5906fb.css.map",
-    "main.43fe504b.js.map": "/static/js/main.43fe504b.js.map",
+    "main.f916a023.css.map": "/static/css/main.f916a023.css.map",
+    "main.d501d49f.js.map": "/static/js/main.d501d49f.js.map",
     "703.7e23af80.chunk.js.map": "/static/js/703.7e23af80.chunk.js.map",
     "513.4b7cc869.chunk.js.map": "/static/js/513.4b7cc869.chunk.js.map",
     "787.a743e0dc.chunk.js.map": "/static/js/787.a743e0dc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf5906fb.css",
-    "static/js/main.43fe504b.js"
+    "static/css/main.f916a023.css",
+    "static/js/main.d501d49f.js"
   ]
 }

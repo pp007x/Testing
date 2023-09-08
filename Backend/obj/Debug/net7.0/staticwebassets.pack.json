@@ -73,20 +73,24 @@
       "PackagePath": "staticwebassets\\build\\static\\js\\787.a743e0dc.chunk.js.map"
     },
     {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.b2fbeaed.js",
-      "PackagePath": "staticwebassets\\build\\static\\js\\main.b2fbeaed.js"
+      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.43fe504b.js",
+      "PackagePath": "staticwebassets\\build\\static\\js\\main.43fe504b.js"
     },
     {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.b2fbeaed.js.LICENSE.txt",
-      "PackagePath": "staticwebassets\\build\\static\\js\\main.b2fbeaed.js.LICENSE.txt"
+      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.43fe504b.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\build\\static\\js\\main.43fe504b.js.LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.b2fbeaed.js.map",
-      "PackagePath": "staticwebassets\\build\\static\\js\\main.b2fbeaed.js.map"
+      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.43fe504b.js.map",
+      "PackagePath": "staticwebassets\\build\\static\\js\\main.43fe504b.js.map"
     },
     {
       "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\media\\HigtechLogo.970cf835285b5eb21061.png",
       "PackagePath": "staticwebassets\\build\\static\\media\\HigtechLogo.970cf835285b5eb21061.png"
+    },
+    {
+      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\media\\HigtechLogo.d9d65153a8067b83bbab.jpeg",
+      "PackagePath": "staticwebassets\\build\\static\\media\\HigtechLogo.d9d65153a8067b83bbab.jpeg"
     },
     {
       "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\media\\LoginBackground.f4381791eae394b7ccd4.jpg",
