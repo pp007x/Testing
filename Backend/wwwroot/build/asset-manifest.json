@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.f916a023.css",
-    "main.js": "/static/js/main.4c8fba1b.js",
+    "main.js": "/static/js/main.22100380.js",
     "static/js/703.7e23af80.chunk.js": "/static/js/703.7e23af80.chunk.js",
     "static/js/513.4b7cc869.chunk.js": "/static/js/513.4b7cc869.chunk.js",
     "static/js/787.a743e0dc.chunk.js": "/static/js/787.a743e0dc.chunk.js",
     "static/media/LoginBackground.jpg": "/static/media/LoginBackground.f4381791eae394b7ccd4.jpg",
-    "static/media/infopagina2.PNG": "/static/media/infopagina2.2fedce62bf52ff451c39.PNG",
-    "static/media/infopagina.PNG": "/static/media/infopagina.7766772a1a706d69ee10.PNG",
+    "static/media/foto1.PNG": "/static/media/foto1.4e23778c971ed8da7011.PNG",
+    "static/media/foto2.PNG": "/static/media/foto2.b046f17ca80cfb6cad98.PNG",
     "static/media/HigtechLogo.jpeg": "/static/media/HigtechLogo.d9d65153a8067b83bbab.jpeg",
     "static/media/HigtechLogo.png": "/static/media/HigtechLogo.970cf835285b5eb21061.png",
     "index.html": "/index.html",
     "main.f916a023.css.map": "/static/css/main.f916a023.css.map",
-    "main.4c8fba1b.js.map": "/static/js/main.4c8fba1b.js.map",
+    "main.22100380.js.map": "/static/js/main.22100380.js.map",
     "703.7e23af80.chunk.js.map": "/static/js/703.7e23af80.chunk.js.map",
     "513.4b7cc869.chunk.js.map": "/static/js/513.4b7cc869.chunk.js.map",
     "787.a743e0dc.chunk.js.map": "/static/js/787.a743e0dc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f916a023.css",
-    "static/js/main.4c8fba1b.js"
+    "static/js/main.22100380.js"
   ]
 }
