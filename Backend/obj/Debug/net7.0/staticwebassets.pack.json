@@ -73,16 +73,16 @@
       "PackagePath": "staticwebassets\\build\\static\\js\\787.a743e0dc.chunk.js.map"
     },
     {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.4c8fba1b.js",
-      "PackagePath": "staticwebassets\\build\\static\\js\\main.4c8fba1b.js"
+      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.22100380.js",
+      "PackagePath": "staticwebassets\\build\\static\\js\\main.22100380.js"
     },
     {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.4c8fba1b.js.LICENSE.txt",
-      "PackagePath": "staticwebassets\\build\\static\\js\\main.4c8fba1b.js.LICENSE.txt"
+      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.22100380.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\build\\static\\js\\main.22100380.js.LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.4c8fba1b.js.map",
-      "PackagePath": "staticwebassets\\build\\static\\js\\main.4c8fba1b.js.map"
+      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\js\\main.22100380.js.map",
+      "PackagePath": "staticwebassets\\build\\static\\js\\main.22100380.js.map"
     },
     {
       "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\media\\HigtechLogo.970cf835285b5eb21061.png",
@@ -97,12 +97,12 @@
       "PackagePath": "staticwebassets\\build\\static\\media\\LoginBackground.f4381791eae394b7ccd4.jpg"
     },
     {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\media\\infopagina.7766772a1a706d69ee10.PNG",
-      "PackagePath": "staticwebassets\\build\\static\\media\\infopagina.7766772a1a706d69ee10.PNG"
+      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\media\\foto1.4e23778c971ed8da7011.PNG",
+      "PackagePath": "staticwebassets\\build\\static\\media\\foto1.4e23778c971ed8da7011.PNG"
     },
     {
-      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\media\\infopagina2.2fedce62bf52ff451c39.PNG",
-      "PackagePath": "staticwebassets\\build\\static\\media\\infopagina2.2fedce62bf52ff451c39.PNG"
+      "Id": "C:\\Users\\steph\\Documents\\EdwinPracticeTool\\backend\\wwwroot\\build\\static\\media\\foto2.b046f17ca80cfb6cad98.PNG",
+      "PackagePath": "staticwebassets\\build\\static\\media\\foto2.b046f17ca80cfb6cad98.PNG"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.LoginApi.Microsoft.AspNetCore.StaticWebAssets.props",
