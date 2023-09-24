@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.bbed65fe.css",
-    "main.js": "/static/js/main.cf94a43f.js",
+    "main.js": "/static/js/main.aedf8cb8.js",
     "static/js/703.7e23af80.chunk.js": "/static/js/703.7e23af80.chunk.js",
     "static/js/513.4b7cc869.chunk.js": "/static/js/513.4b7cc869.chunk.js",
     "static/js/787.a743e0dc.chunk.js": "/static/js/787.a743e0dc.chunk.js",
@@ -12,13 +12,13 @@
     "static/media/HigtechLogo.png": "/static/media/HigtechLogo.970cf835285b5eb21061.png",
     "index.html": "/index.html",
     "main.bbed65fe.css.map": "/static/css/main.bbed65fe.css.map",
-    "main.cf94a43f.js.map": "/static/js/main.cf94a43f.js.map",
+    "main.aedf8cb8.js.map": "/static/js/main.aedf8cb8.js.map",
     "703.7e23af80.chunk.js.map": "/static/js/703.7e23af80.chunk.js.map",
     "513.4b7cc869.chunk.js.map": "/static/js/513.4b7cc869.chunk.js.map",
     "787.a743e0dc.chunk.js.map": "/static/js/787.a743e0dc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bbed65fe.css",
-    "static/js/main.cf94a43f.js"
+    "static/js/main.aedf8cb8.js"
   ]
 }
